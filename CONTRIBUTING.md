@@ -29,7 +29,7 @@ Following the project conventions will make the pull request process go faster a
 
 We try to follow the swift.org [style guidelines](https://swift.org/documentation/api-design-guidelines/)
 
-All code should be in Swift 4 (unless fixing something in the C/Objective-C Parsing code).
+All code should be in Swift 6 (unless fixing something in the C/Objective-C Parsing code).
 
 Methods should be short. Try to make your changes look like the surrounding code.
 

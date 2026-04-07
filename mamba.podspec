@@ -18,7 +18,7 @@ s.license           = { :type => 'Apache License, Version 2.0',
 s.homepage          = "https://github.com/Comcast/mamba"
 s.summary           = "mamba - a library for parsing, validating and editing HLS manifests"
 s.author            = "Comcast"
-s.swift_version     = '5.0'
+s.swift_version     = '6.0'
 
 s.ios.deployment_target     = '9.0'
 s.tvos.deployment_target    = '9.0'
