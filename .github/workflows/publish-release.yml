@@ -5,6 +5,9 @@ on:
       - 'main'
       - 'main_1.x'
 
+permissions:
+  contents: read
+
 jobs:
   get-version:
     name: Get version for release
@@ -13,7 +16,7 @@ jobs:
       version: ${{ steps.version.outputs.version }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - id: version
         run: echo "version=`cat ./mambaSharedFramework/Resources/version.txt`" >> "$GITHUB_OUTPUT"
 
@@ -24,9 +27,9 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - name: Create release
-        uses: elgohr/Github-Release-Action@v5
+        uses: elgohr/Github-Release-Action@c5ea99036abb741a89f8bf1f2cd7fba845e3313a # v5
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

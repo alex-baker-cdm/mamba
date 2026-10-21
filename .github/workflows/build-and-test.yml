@@ -4,6 +4,9 @@ on:
   pull_request:
     branches: [ "develop", "develop_1.x", "main", "main_1.x" ]
 
+permissions:
+  contents: read
+
 jobs:
   define-ios-device:
     name: Get iOS simulator device to run iOS tests on
@@ -29,7 +32,7 @@ jobs:
             device: Apple TV
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - name: Build
         env:
           scheme: ${{ matrix.target.scheme }}
